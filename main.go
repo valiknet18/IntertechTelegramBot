@@ -11,7 +11,7 @@ import (
 func main() {
 	config.ParseConfig()
 
-	bot, err := tgbotapi.NewBotAPI("123528822:AAH-OEyfyOjJjy9Jjmq5ZJEbiqwBF-ybd8Q")
+	bot, err := tgbotapi.NewBotAPI("")
 	if err != nil {
 		log.Panic(err)
 	}
