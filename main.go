@@ -1,9 +1,9 @@
 package main
 
 import (
-	"log"
-	"github.com/Syfaro/telegram-bot-api"
+	"github.com/valiknet18/IntertechTelegramBot/Godeps/_workspace/src/github.com/Syfaro/telegram-bot-api"
 	"github.com/valiknet18/IntertechTelegramBot/config"
+	"log"
 	"strings"
 	// "fmt"
 )
@@ -40,9 +40,9 @@ func main() {
 					result := CreateNewTask(resultString[3], resultString[1], resultString[2])
 
 					if result {
-						message = tgbotapi.NewMessage(update.Message.Chat.ID, "Новое задание для пользователя " + resultString[3] + " успешно добавлено")
+						message = tgbotapi.NewMessage(update.Message.Chat.ID, "Новое задание для пользователя "+resultString[3]+" успешно добавлено")
 					} else {
-						message = tgbotapi.NewMessage(update.Message.Chat.ID, "Произошла какае-то ошибка")		
+						message = tgbotapi.NewMessage(update.Message.Chat.ID, "Произошла какае-то ошибка")
 					}
 				}
 
@@ -58,12 +58,12 @@ func main() {
 					if result {
 						message = tgbotapi.NewMessage(update.Message.Chat.ID, "Выбраное задание успешно удалено")
 					} else {
-						message = tgbotapi.NewMessage(update.Message.Chat.ID, "Произошла какае-то ошибка")		
+						message = tgbotapi.NewMessage(update.Message.Chat.ID, "Произошла какае-то ошибка")
 					}
 				}
 			}
 
 			bot.SendMessage(message)
 		}
-	}	
+	}
 }
